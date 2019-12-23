@@ -4,6 +4,10 @@
         "jsx": "react",
         "watch": true,
         "target": "ES5",
-        "lib": ["ES6","dom"]
+        "lib": [
+            "ES6",
+            "dom"
+        ],
+        "outDir": "./src/JS"
     }
 }

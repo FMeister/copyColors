@@ -1,10 +1,15 @@
 import * as React from "react";
 
-function Header(props: { text: string; }) {
+type HeaderProps = {
+    text: string;
+}
+
+function Header(props: HeaderProps) {
+
     return (
         <div>
-            <h1> Hi, steve {props.text}</h1>
-        </div>
+            <h1 className="header"> Hi, {props.text}</h1>
+        </div >
     );
 }
 
