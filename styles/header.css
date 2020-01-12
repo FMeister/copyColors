@@ -1,0 +1,10 @@
+.headerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.979) 10px 10px 0px 0px;
+}

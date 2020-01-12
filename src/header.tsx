@@ -8,8 +8,8 @@ function Header(props: HeaderProps) {
 
     return (
         <div>
-            <h1 className="header"> Hi, {props.text}</h1>
-        </div >
+            <h1 className="header">{props.text}</h1>
+        </div>
     );
 }
 

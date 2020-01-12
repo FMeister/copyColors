@@ -1,0 +1,21 @@
+.colorButtonContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+    padding: 60px;
+}
+
+.colorButton {
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: rgb(255, 255, 255) -3px -3px 4px 3px , rgba(0, 0, 0, 0.22) 3px 3px 4px 3px;
+}
+
+.colorButton:hover {
+    box-shadow: none;
+}

@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("React");
 var ReactDOM = require("react-dom");
+var header_1 = require("./header");
 var colorButton_1 = require("./colorButton");
+var storedColorButton_1 = require("./storedColorButton");
 var colorStrings = [
     "rgb(237,177,32)",
     "rgb(217, 83, 25)",
@@ -88,6 +90,17 @@ var colorStrings = [
     "#415B76",
     "#EC7063"
 ];
-ReactDOM.render(React.createElement("div", null, colorStrings.map(function (value, index) {
-    return (React.createElement(colorButton_1.default, { color: value, key: index }));
-})), document.querySelector('#root'));
+// const [backgroundColor, setBackgroundColor] = React.useState("rgb(220,220,220)");
+// const [primaryColor, setPrimaryColor] = React.useState("rgb(220,220,220)");
+// const [secondaryColor, setSecondaryColor] = React.useState("rgb(220,220,220)");
+// const [tertiaryColor, setTertiaryColor] = React.useState("rgb(220,220,220)");
+ReactDOM.render(React.createElement("div", null,
+    React.createElement("div", { className: "headerContainer" },
+        React.createElement(header_1.default, { text: "Pick a Color: " }),
+        React.createElement(storedColorButton_1.default, { color: "rgb(220,220,220)", text: "Background" }),
+        React.createElement(storedColorButton_1.default, { color: "rgb(220,220,220)", text: "Primary" }),
+        React.createElement(storedColorButton_1.default, { color: "rgb(220,220,220)", text: "Secondary" }),
+        React.createElement(storedColorButton_1.default, { color: "rgb(220,220,220)", text: "Tertiary" })),
+    React.createElement("div", { className: "colorButtonContainer" }, colorStrings.map(function (value, index) {
+        return (React.createElement(colorButton_1.default, { color: value, key: index }));
+    }))), document.querySelector('#root'));

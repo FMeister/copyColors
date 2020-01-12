@@ -4,6 +4,7 @@ import Header from "./header";
 import CustomDate from "./customDate";
 import CustomList from "./customList";
 import ColorButton from "./colorButton";
+import StoredColorButton from "./storedColorButton";
 
 const colorStrings: string[] = [
     "rgb(237,177,32)",
@@ -99,18 +100,33 @@ const colorStrings: string[] = [
     "#EC7063"
 ]
 
+// const [backgroundColor, setBackgroundColor] = React.useState("rgb(220,220,220)");
+// const [primaryColor, setPrimaryColor] = React.useState("rgb(220,220,220)");
+// const [secondaryColor, setSecondaryColor] = React.useState("rgb(220,220,220)");
+// const [tertiaryColor, setTertiaryColor] = React.useState("rgb(220,220,220)");
+
+
 
 ReactDOM.render(
     <div>
-        {
-            colorStrings.map(
-                (value, index) => {
-                    return (
-                        <ColorButton color={value} key={index}></ColorButton>
-                    );
-                }
-            )
-        }
-    </div >,
+        <div className="headerContainer">
+            <Header text={"Pick a Color: "}></Header>
+            <StoredColorButton color="rgb(220,220,220)" text="Background"></StoredColorButton>
+            <StoredColorButton color="rgb(220,220,220)" text="Primary"></StoredColorButton>
+            <StoredColorButton color="rgb(220,220,220)" text="Secondary"></StoredColorButton>
+            <StoredColorButton color="rgb(220,220,220)" text="Tertiary"></StoredColorButton>
+        </div>
+        <div className="colorButtonContainer">
+            {
+                colorStrings.map(
+                    (value, index) => {
+                        return (
+                            <ColorButton color={value} key={index}></ColorButton>
+                        );
+                    }
+                )
+            }
+        </div>
+    </div>,
     document.querySelector('#root')
 );
