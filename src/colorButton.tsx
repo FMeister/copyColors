@@ -7,21 +7,21 @@ type ButtonProps = {
 
 function ColorButton(props: ButtonProps) {
 
-    let c = Color(props.color);
+    let color = Color(props.color);
 
-    let divStyle = { backgroundColor: props.color };
+    let divStyle = { backgroundColor: props.color};
 
     let hStyle = {
         color: "white"
     };
-    if (c.isLight()) {
+    if (color.isLight()) {
         hStyle.color = "black";
     }
 
 
     const copyToClipboard = () => {
         const el = document.createElement('textarea');
-        el.value = c.toString();
+        el.value = color.toString();
         document.body.appendChild(el);
         el.select();
         document.execCommand('copy');
@@ -31,9 +31,9 @@ function ColorButton(props: ButtonProps) {
 
 
     return (
-        <div style={divStyle} onClick={copyToClipboard}>
+        <div className="colorButton" style={divStyle} onClick={copyToClipboard}>
             <h2 style={hStyle}>
-                {c.toString()}
+                {color.toString()}
             </h2>
         </div >
 
